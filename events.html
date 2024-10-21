@@ -6,9 +6,10 @@
     <title>Events</title>
 </head>
 <body>
-    <h1>JavaScript Events</h1>
-
-    <button>Don't Press Me !</button>
+    <form method="get">
+        <label>Your Name : <input type="text" name="name" ></label>
+        <input type="submit">
+    </form>
 
 
     <script>
@@ -32,10 +33,23 @@
     ); */
 
 
-        btn.addEventListener('click', function(event){
+        /* btn.addEventListener('click', function(event){
             event.target.style.backgroundColor = 'red';
             alert("I told you not to press me!");
-    });
+    }); */
+
+
+        var form = document.querySelector('form');
+
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+
+            var formData =document.querySelector('input').value;
+            alert(formData);
+        })
+
+
+
 
     </script>
 
