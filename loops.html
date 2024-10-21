@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing loops</title>
+</head>
+<body>
+    <h1>Loops in js</h1>
+
+
+    <script>
+
+      /* for( var i = 0; i< 10; i++){
+        console.log(i);
+      } */
+
+      var colors =['red','blue','yellow','green','orange','purple'];
+
+      /* for( var i= 0; i<colors.length;i++){
+        console.log(colors[i]);
+      } */
+
+      /* for( var eachColor of colors){
+        console.log(eachColor);
+      } */
+
+      /* var myString = "Here is a string of text!";
+
+      for( var i = 0; i<myString.length;i++){
+        console.log(myString[i]);
+      } */
+
+      /* var incrementor = 0;
+      var text = "";
+
+      while( incrementor < 10){
+        text += `The increment is ${incrementor}, the incrementor squard is ${incrementor*incrementor} \n`;
+        incrementor++;
+      }
+
+      console.log(text); */
+
+      /* var text = " Hello I am really hunger!";
+      console.log(text);
+      var upperCaseText = text.toUpperCase();
+      var lowerCaseText = text.toLowerCase(); */
+
+      /* console.log(upperCaseText); */
+
+     /*  var reallyLocation = text.search("really");
+      var specialWord = text.substr(reallyLocation, 6);
+      specialWord = specialWord.toUpperCase();
+      var newString = text.replace("really", specialWord);
+      console.log(newString); */
+
+
+      var foodies = ['RiceCrackers','BananaChips','Cookies','Biscets'];
+      var myString =`I am really hungry, i want to eat some `;
+      // lets use string literals syntax to print this foods
+     /*  for( var myPlate of foodies){
+        myPlate =`I am really hungry , i want to eat ${foodies} \n`;
+      }
+
+      console.log(myPlate); */
+      /* for( var i = 0; i<foodies.length;i++){
+        console.log(`${myString} ${foodies[i]}`);//this is called template literals
+
+      } */
+      for(var i =0; i<foodies.length;i++){
+        //we want only even food so we want a even incrementor
+        if(i%2===0){
+          console.log(`${myString} ${foodies[i].toUpperCase()}`);
+        }else{
+          console.log(`${myString} ${foodies[i]}`);
+        }
+      }
+
+
+      
+      
+
+
+
+    </script>
+</body>
+</html>

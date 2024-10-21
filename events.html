@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+
+    <button>Don't Press Me !</button>
+
+
+    <script>
+
+       var btn = document.querySelector('button');
+
+      /*  function ouch(){
+        alert("I Told you not to press me!");
+       } */
+
+       
+
+       /*  btn.onclick = function(){
+            alert("I told you not to press me!");
+        }
+ */
+        /* btn.addEventListener('click',ouch); */
+
+        /* btn.addEventListener('click',
+        function(){ alert("I told you not to press me")}
+    ); */
+
+
+        btn.addEventListener('click', function(event){
+            event.target.style.backgroundColor = 'red';
+            alert("I told you not to press me!");
+    });
+
+    </script>
+
+
+</body>
+</html>
+

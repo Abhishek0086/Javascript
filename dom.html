@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Examles</title>
+</head>
+<style>
+    .blue{ color:aquamarine;}
+</style>
+<body>
+    <h1>Dom Examples</h1>
+    <!-- <p id="one">Here is a paragraph with unique Id</p> -->
+     <p class="special">Here is a paragraph.</p>
+     <p>Here is an another paragraph</p>
+     <p class="special">Here is one more paragraph</p>
+
+    <div id="container">
+        <p class="random">This is a paragraph</p>
+        <p>This is also a paragraph</p>
+        <p>This is another paragraph</p>
+    </div>
+
+    <div id="main">
+        <p>This is a paragraph</p>
+        <p>This is a paragraph</p>
+        <p>This is a paragraph</p>
+    </div>
+
+    <div id="caseTwo">
+        <p>Here is a paragraph</p>
+        <p>Here is another paragraph</p>
+        <p>This is also a paragraph</p>
+    </div>
+
+    <form>
+        <label><input type="checkbox">Yes!</label>
+    </form>
+
+
+    <script>
+// document.getElementById('one').style.color ='red';
+/* var text = document.getElementsByTagName('p');
+for(var i= 0;i<text.length;i++){
+    text[i].style.color ='red';
+    alert(`showing paragraph ${i}`)
+} */
+
+var myclass = document.getElementsByClassName('special');
+for(var i =0; i<myclass.length;i++){
+    myclass[i].style.color='blue';
+}
+
+    var myContainer =document.querySelector('#container .random');
+
+    myContainer.style.color = 'green';
+
+
+    /* var caseOne = document.querySelectorAll('#main p');
+    for( var i =0; i<caseOne.length;i++){
+        caseOne[i].style.color ='purple'
+    } */
+
+    /* var myDiv = document.getElementById('main');
+    myDiv.innerHTML ='<p > Here is a paragraph</p>' */
+    
+
+    document.getElementById('main').innerHTML = '<h1>i am here </h1>';
+
+
+    var firstPara = document.querySelector('#caseTwo p');
+    firstPara.className = 'blue';
+
+    var mycheckBox = document.querySelector('input');
+    mycheckBox.setAttribute('checked','checked');
+
+
+    var Mypar = document.createElement('p');
+
+    var myText = document.createTextNode("This is a paragraph v1.0");
+
+    Mypar.appendChild(myText);
+
+    document.querySelector('form').appendChild(Mypar);
+
+
+    var myDiv = document.querySelector('#caseTwo');
+    myDiv.removeChild(myDiv.children[1]);
+
+    </script>
+</body>
+</html>
