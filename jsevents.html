@@ -7,32 +7,21 @@
 </head>
 <style>
     div{
-        height: 50px;
         width: 50px;
-        background-color: blue;
+        height: 5000px;
+        background-color: aquamarine;
     }
 </style>
 <body>
-    <h1>Roll your mouse over the boxes</h1>
+
+    <h1>Capture scrolling events !</h1>
     <div></div>
-
     <script>
+        var pageTop;
 
-        var heading = document.querySelector('h1');
-        var container = document.querySelector('div');
-
-        container.addEventListener('mouseover',function(){
-            heading.innerHTML = " The mouse is Over the box";
+        window.addEventListener("scroll",function(){
+            
         })
-
-        container.addEventListener('mouseout',function(){
-            heading.innerHTML = "The mouse has left the box!"
-        })
-
-       heading.addEventListener('mouseover',function(){
-            heading.innerHTML ="Roll your mouse over the boxes ";
-        })
-
     </script>
 </body>
 </html>
