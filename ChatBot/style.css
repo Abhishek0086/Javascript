@@ -232,13 +232,19 @@ body {
 }
 
 .chat-form .chat-controls #send-messages{
+    background: #5350c4;
     color: #fff;
-    background: none;
+    display: none;
+}
+
+.chat-form .message-input:valid~.chat-controls #send-messages{
+    display: block;
+    
 }
 
 .chat-form .chat-controls #send-messages:hover{
-    background: #5350c4;
-    color: #fff;
+    background: #3d39ac;
+    
 }
 
 
