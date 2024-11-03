@@ -2,18 +2,24 @@ const chatbody =document.querySelector(".chat-body");
 const messageInput =document.querySelector(".message-input");
 const sendMessageButton =document.querySelector("#send-messages");
 
+const API_KEY ="";
+const API_URL ="https://llama3-1.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoiaWZ6dWY2N3dqcTFkczQ4amVkNmEyMm9oIiwiUmVzb3VyY2UiOiJodHRwczpcL1wvbGxhbWEzLTEubGxhbWFtZXRhLm5ldFwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDcxNDYzOH19fV19&Signature=qAsyPwMOzuUqF9wYADCww4VQlzaNId9sd9SeEHe6UzztLVYyu1nARycdHL6tSN%7EYKDXoD2B-A77-sXdlQhNR5b782lrsU2lxpyYmfXEGDDifrcwDFqVL61sNf4bR5X2f1arzIWYs-axS48M1KTivpJb-DP6uJi9SfgWoP%7EfSNzdtdIX-pd217iJY9aLcgwbJnpwqpLqDcdUMmLK3rCucEA5vLOv%7E2mcm33BZqWO-b%7ENYs9fluHGlJOhpYaqAugWFGJekVV2Oc6pGPhv4n0KMr1wxzF5a2CcPzkYXQ%7EvLDAVSgYYqch8M1TAcO4dBACVUtAww467eHjZdAJy0RUKMFg__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=1596717764612296";
+
 const userData = {
     message: null
     
 };
 
 //create message element with dynamic classes and return it
-const createMessageElement = (content,classes) => {
+const createMessageElement = (content,...classes) => {
     const div =document.createElement("div");
-    div.classList.add("message", classes);
+    div.classList.add("message", ...classes);
     div.innerHTML = content;
     return div;
 }
+
+const generatedBotResponse =() => {}
+
 /* const createMessageElement = (content, classes) => {
     // Create a new element to safely parse and sanitize the content
     const tempDiv = document.createElement("div");
@@ -51,8 +57,9 @@ const handleOutgoingMessage = (e) => {
                         <div class="dot"></div>
                     </div>
                 </div>`;
-    const incomingMessageDiv = createMessageElement(messageContent, "bot-message");
+    const incomingMessageDiv = createMessageElement(messageContent, "bot-message","thinking");
     chatbody.appendChild(incomingMessageDiv);
+    generatedBotResponse();
     }, 600);
 }
 
